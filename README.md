@@ -83,7 +83,7 @@ max(order_date)
 
 ## 🧪 Technologies Used
 
-- Databricks  
+- Databricks (Community Edition)  
 - PySpark  
 - Delta Lake  
 
@@ -102,7 +102,18 @@ max(order_date)
 
 - Only new data is processed  
 - Existing records are updated  
-- Metadata is updated with latest processed date  
+- Metadata is updated with latest processed date
+
+## 📷 Pipeline Output
+
+### Delta Table (Silver Layer)
+![Delta](screenshots/deltatable.png)
+
+### Incremental Load Execution
+![Incremental](screenshots/incremental_pipeline.png)
+
+### Metadata Update (Watermark)
+![Metadata](screenshots/metadata_update.png)
 
 ---
 
