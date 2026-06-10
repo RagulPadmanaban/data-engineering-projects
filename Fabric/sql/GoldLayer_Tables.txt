@@ -1,0 +1,79 @@
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_category_sales_analytics]
+(
+	[category_name] [varchar](150) NULL,
+	[total_orders] [int] NULL,
+	[total_quantity_sold] [int] NULL,
+	[total_sales_amount] [float] NULL,
+	[average_sales_amount] [float] NULL,
+	[last_sale_date] [datetime2](6) NULL,
+	[category_performance] [varchar](100) NULL
+)
+GO
+
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_customer_analytics]
+(
+	[customer_id] [int] NULL,
+	[customer_name] [varchar](150) NULL,
+	[total_orders] [int] NULL,
+	[total_spent] [float] NULL,
+	[average_order_value] [float] NULL,
+	[last_order_date] [datetime2](6) NULL,
+	[total_quantity_purchased] [int] NULL,
+	[customer_category] [varchar](100) NULL
+)
+GO
+
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_inventory_summary]
+(
+	[product_id] [int] NULL,
+	[product_name] [varchar](150) NULL,
+	[warehouse_name] [varchar](150) NULL,
+	[stock_quantity] [int] NULL,
+	[reorder_level] [int] NULL,
+	[last_restock_date] [datetime2](6) NULL,
+	[inventory_status] [varchar](100) NULL
+)
+GO
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_payment_analytics]
+(
+	[payment_method] [varchar](100) NULL,
+	[payment_status] [varchar](100) NULL,
+	[total_payments] [int] NULL,
+	[total_payment_amount] [float] NULL,
+	[average_payment_amount] [float] NULL,
+	[last_payment_date] [datetime2](6) NULL,
+	[payment_volume_category] [varchar](100) NULL
+)
+GO
+
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_product_analytics]
+(
+	[product_id] [int] NULL,
+	[product_name] [varchar](150) NULL,
+	[total_quantity_sold] [int] NULL,
+	[total_revenue] [float] NULL,
+	[average_unit_price] [float] NULL,
+	[total_orders] [int] NULL,
+	[last_sale_date] [datetime2](6) NULL,
+	[product_performance_category] [varchar](100) NULL
+)
+GO
+
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_sales_summary]
+(
+	[product_id] [int] NULL,
+	[product_name] [varchar](150) NULL,
+	[total_sales] [float] NULL
+)
+GO
+
+CREATE TABLE [multicloud_warehouse].[Gold].[gold_sales_trend_analytics]
+(
+	[sales_date] [date] NULL,
+	[sales_category] [varchar](100) NULL,
+	[total_orders] [int] NULL,
+	[total_quantity_sold] [int] NULL,
+	[total_sales_amount] [float] NULL,
+	[average_sales_amount] [float] NULL
+)
+GO
